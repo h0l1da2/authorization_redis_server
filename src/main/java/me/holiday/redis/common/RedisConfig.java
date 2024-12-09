@@ -15,7 +15,7 @@ public class RedisConfig {
     public RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory, MessageListenerAdapter listenerAdapter) {
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
         container.setConnectionFactory(connectionFactory);
-        container.addMessageListener(listenerAdapter, new PatternTopic("chat"));
+        container.addMessageListener(listenerAdapter, new PatternTopic("token"));
 
         return container;
     }
